@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table_with_json</title> 
+    <link rel="stylesheet" href="tb_json.css">
+</head>
+<body>
+    <div id="tb">
+        <table id="peopleTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>First name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Group</th>
+                <th>Start Date</th>
+                <th>Scholarship</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+    </div>  
+          <script>
+            
+            let people = [
+              {"id":1,"name":"Mike","surname":"Flyman","age":"23","group":"b2", "start_date":"12-03-2010", "scholarship":"200"},
+              {"id":2,"name":"Dale","surname":"Blenkin","age":"21","group":"a1", "start_date":"12-04-2023", "scholarship":"200"},
+              {"id":3,"name":"Miles","surname":"Morales","age":"50","group":"a1", "start_date":"21-12-2012", "scholarship":"150"},
+              {"id":4,"name":"Gwen","surname":"Stacy","age":"21","group":"a2", "start_date":"02-03-2003", "scholarship":"0"},
+              {"id":5,"name":"Pavitr","surname":"Something","age":"20","group":"b2", "start_date":"21-01-2022", "scholarship":"0"},
+              {"id":6,"name":"Lilit","surname":"Future","age":"45","group":"b1", "start_date":"23-02-2002", "scholarship":"150"},
+              {"id":7,"name":"Kate","surname":"Brown","age":"30","group":"b1", "start_date":"30-02-2001", "scholarship":"0"},
+              {"id":8,"name":"Kate junior","surname":"Brown","age":"21","group":"a2", "start_date":"11-01-2023", "scholarship":"200"},
+              {"id":9,"name":"bla-bla","surname":"Blenkin","age":"34","group":"b2", "start_date":"30-03-2003", "scholarship":"150"},
+              {"id":10,"name":"Diana","surname":"Pirem","age":"17","group":"b2", "start_date":"23-04-1190", "scholarship":"0"}
+            ];
+        
+            let tableBody = document.querySelector('#peopleTable tbody');
+        
+            for (let i = 0; i < people.length; i++) {
+                
+              let row = tableBody.insertRow();
+        
+              let idCell = row.insertCell();
+              idCell.textContent = people[i].id;
+        
+              let nameCell = row.insertCell();
+              nameCell.textContent = people[i].name;
+        
+              let surnameCell = row.insertCell();
+              surnameCell.textContent = people[i].surname;
+        
+              let ageCell = row.insertCell();
+              ageCell.textContent = people[i].age;
+        
+              let groupCell = row.insertCell();
+              groupCell.textContent = people[i].group;
+        
+              let startDateCell = row.insertCell();
+              startDateCell.textContent = people[i].start_date;
+        
+              let scholarshipCell = row.insertCell();
+              scholarshipCell.textContent = people[i].scholarship;
+            }
+        
+          </script>
+        </body>
+        </html>
