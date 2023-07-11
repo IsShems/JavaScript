@@ -1,0 +1,11 @@
+#AccInput{
+    margin-bottom: 15px;
+}
+body{
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    margin-left: 40%;
+    margin-top: 5%;
+    border-radius: 10px;
+    font-size: 18px;
+}
